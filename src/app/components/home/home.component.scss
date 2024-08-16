@@ -1,0 +1,254 @@
+.initial{
+    background-image: url("/assets/img/angynito.jpg");
+    background-size: cover;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    height: 800px;
+
+    &__icon{
+        max-width: 100px;
+    }
+
+
+    &__element{
+        &.info{
+            p{
+                font-size: 30px
+            }
+        }
+    }
+}
+
+
+
+.wedding{
+    padding: 4em;
+    background-image: url("/assets/img/bg-paper.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    .wedding__icon{
+        max-width: 150px;
+        margin-bottom: 1em;
+    }
+}
+
+.separator-paper{
+    &.reverse{
+        transform: rotate(180deg);
+    }
+}
+
+.location{
+    margin-top: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em 0;
+
+    .location__hour{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        align-items: center;
+        margin-top: 2em;
+        margin-bottom: 2em;
+        img{
+            width: 150px;
+        }
+        p{
+            font-size: 30px;
+            margin: 0 5px;
+        }
+    }
+    
+}
+
+.timer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.attendance{
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em .6em;
+
+    .attendance__logo{
+        max-width: 150px;
+        margin-bottom: 1em;
+    }
+
+    .attendance__form{
+        background-color: white;
+        max-width: fit-content;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+        text-align: left;
+        nz-form-label{
+            font-weight: bold;
+        }
+        .wedding-form {
+            padding: 1em;
+            max-width: 350px;
+          }
+    
+          .wedding-form-margin {
+            margin-bottom: 16px;
+          }
+    
+          .wedding-form-forgot {
+            float: right;
+          }
+    
+          .wedding-form-button {
+            width: 100%;
+          }
+
+          ::ng-deep{
+            .ant-radio-group, nz-input-number-group{
+                display: block;
+                width: 100%;
+            }
+            .ant-input-number{
+                width: 100%;
+            }
+          }
+
+          [nz-radio] {
+            display: block;
+            height: 32px;
+            line-height: 32px;
+          }
+    }
+}
+
+.information{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1em 0;
+
+    .information__logo{
+        max-width: 150px;
+        margin-bottom: 1em;
+    }
+
+    .information__adult{
+        background-image: url("/assets/img/marco-horizontal.svg");
+        background-size: cover;
+        width: 100%;
+        height:350px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        &-content{
+            padding: 0 5em;
+        }
+    }
+
+    .information__icon{
+        img{
+            max-width: 150px;
+        }
+    }
+
+    .information__present{
+        background-image: url("/assets/img/marco-vertical.svg");
+        background-size: cover;
+        width: 100%;
+        height: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-content{
+            padding: 0 5em;
+        }
+
+        .bank-account{
+            p{
+                display: inline;
+                padding: .5em;
+                font-size: 24px;
+                border-radius: 50px;
+                background-color: rgb(120 142 141 / 35%);
+            }
+        }
+    }
+
+    .information__bus{
+        background-image: url("/assets/img/marco-vertical.svg");
+        background-size: cover;
+        width: 100%;
+        height: 750px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        &-content{
+            padding: 0 5em;
+        }
+    }
+
+    ::ng-deep{
+        .ant-collapse > .ant-collapse-item > .ant-collapse-header{
+            font-size: 24px;
+            text-align: left!important;
+        }
+
+        .ant-collapse > .ant-collapse-item > .ant-collapse-header .ant-collapse-arrow{
+            font-size: 24px;
+        }
+    }
+}
+
+.album{
+    background-image: url("/assets/img/bg-paper.jpg");
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3em 0;
+    margin-top: 3em;
+    .album__logo{
+        img{
+            max-width: 150px;
+        }
+    }
+}
+
+.end{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 3em 0;
+
+    .end__img{
+        img{
+            max-width: 350px;
+        }
+    }
+}

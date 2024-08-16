@@ -1,1 +1,40 @@
-/* You can add global styles to this file, and also import other style files */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pinyon+Script&display=swap');
+
+
+*{
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Pinyon Script', cursive;
+}
+
+h1{
+    font-size: 50px
+}
+
+h2{
+    font-size: 42px
+}
+
+h3{
+    font-size: 30px
+}
+
+nz-content{
+    font-family: 'Inter', sans-serif;
+    section:not(.fullwidth){
+        padding: 1em .6em
+    }
+}
+
+.fullwidth{
+    img{
+        width: 100%;
+    }
+}

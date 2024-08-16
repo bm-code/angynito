@@ -1,0 +1,242 @@
+<nz-content>
+  <section class="initial fullwidth">
+    <div class="initial__icon">
+      <img src="assets/img/icon-initial.png" alt="Logo">
+    </div>
+    <div class="initial__element info">
+      <h1>Angy y Antonio</h1>
+      <p>{{weddingDate | date: 'dd·MM·yyyy'}}</p>
+    </div>
+  </section>
+
+
+  <section class="wedding fullwidth">
+    <div class="wedding__icon">
+      <img src="assets/img/heart.png" alt="Icono corazón">
+    </div>
+    <div class="wedding__info">
+      <p>Ha llegado el momento</p>
+      <h2>¡Nos casamos!</h2>
+      <p> Y nos hace mucha ilusión invitaros a compartir con nosotros este día tan especial.</p>
+      <p>
+        Os esperamos el <strong>
+          23 de Noviembre de 2024
+          a las 13:00h en la hacienda Al-Baraka.
+        </strong>
+      </p>
+      <p>Allí nos daremos el <strong>Sí Quiero</strong> y tendrá lugar el convite posterior gran fiesta de nuestra boda.
+      </p>
+      <h2>¡Os esperamos!</h2>
+    </div>
+  </section>
+
+
+  <section class="location">
+    <div class="location__image">
+      <img src="assets/img/fuente.png" alt="Hacienda Al-Baraka">
+    </div>
+    <div class="location__hour">
+      <img src="assets/img/separator-left.svg" alt="Separador">
+      <p>13:00h</p>
+      <img src="assets/img/separator-right.svg" alt="Separador">
+    </div>
+    <div class="location__place">
+      <h2>Hacienda <br> Al-Baraka</h2>
+      <h3>Dos Hermanas</h3>
+      <a href="https://maps.app.goo.gl/d3k8njopisiaXqwW9" target="_blank" rel="noopener noreferrer" nz-button
+        nzType="default" nzShape="round" nzSize="large"><span nz-icon nzType="expand-alt" nzTheme="outline"></span>
+        Abrir mapa</a>
+    </div>
+  </section>
+
+  <section class="timer">
+    <div class="timer__countdown">
+      <p>Quedan {{ countdown.days }} días, {{ countdown.hours }} horas, {{ countdown.minutes }} minutos y {{
+        countdown.seconds }} segundos</p>
+    </div>
+
+    <div class="timer__calendar">
+      <h2>Noviembre</h2>
+      <div class="timer__calendar-img">
+        <img src="assets/img/calendar.png" alt="Calendario">
+      </div>
+    </div>
+
+  </section>
+
+  <section class="attendance">
+    <div class="attendance__logo">
+      <img src="assets/img/icon-attendance.png" alt="Icono asistencia">
+    </div>
+
+    <h2>Confirma tu asistencia</h2>
+    <p>Te dejamos este formulario para que lo rellenes y lo envíes, así nos ayudas a contabilizarlo</p>
+    <h3>Te agradecemos si lo haces lo antes posible, nos haría mucha ilusión contar contigo</h3>
+
+    <div class="attendance__form">
+      <form action="https://formspree.io/f/mgvwzvyb" method="POST" nz-form [formGroup]="attendanceForm"
+        class="wedding-form" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-control>
+            <nz-form-label nzFor="attendance">¿Asistirás a nuestra boda?</nz-form-label>
+            <nz-select formControlName="attendance">
+              <nz-option [nzValue]="true" nzLabel="Sí, asistiré"></nz-option>
+              <nz-option [nzValue]="false" nzLabel="No, no podré asistir"></nz-option>
+            </nz-select>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Debes rellenar tu nombre">
+            <nz-form-label for="name">Nombre y apellidos</nz-form-label>
+            <nz-input-group>
+              <input type="text" nz-input formControlName="name" placeholder="Nombre y apellidos" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <nz-form-label for="companionName">Nombre y apellidos de tu acompañante</nz-form-label>
+            <nz-input-group>
+              <input type="text" nz-input formControlName="companionName"
+                placeholder="Si tu acompañante está invitado, indícanos nombre y apellidos" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <nz-form-label for="intolerances">Indica si tienes alguna alergía o intolerancia</nz-form-label>
+            <nz-input-group>
+              <input type="text" nz-input formControlName="intolerances" placeholder="Alergias o intolerancias" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control nzErrorTip="Debes rellenar tu teléfono">
+            <nz-form-label for="phone">Teléfono</nz-form-label>
+            <nz-input-group>
+              <input type="number" nz-input formControlName="phone" placeholder="Teléfono" />
+            </nz-input-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <nz-form-label for="busSeats">Nº de plazas de autobús</nz-form-label>
+            <nz-input-number-group>
+              <nz-input-number [nzMax]="5" [nzMin]="1" formControlName="busSeats"
+                nzPlaceHolder="Indica cuantas plazas ocuparás"></nz-input-number>
+            </nz-input-number-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <nz-form-label for="busUse">¿Cuándo harás uso del autobús?</nz-form-label>
+            <nz-radio-group formControlName="busUse">
+              <label nz-radio nzValue="A">Solo ida</label>
+              <label nz-radio nzValue="B">Solo vuelta</label>
+              <label nz-radio nzValue="C">Ida y vuelta</label>
+            </nz-radio-group>
+          </nz-form-control>
+        </nz-form-item>
+        <nz-form-item>
+          <nz-form-control>
+            <nz-form-label for="message">¿Quieres dejarnos un mensaje?</nz-form-label>
+            <textarea formControlName="message" nz-input placeholder="Escribe aquí tu mensaje"
+              [nzAutosize]="{ minRows: 3, maxRows: 5 }"></textarea>
+          </nz-form-control>
+        </nz-form-item>
+
+        <button [disabled]="!attendanceForm.valid" [nzLoading]="loading" nz-button class="wedding-form-button wedding-form-margin" [nzType]="'primary'"
+          type="submit">Confirmar</button>
+      </form>
+    </div>
+
+  </section>
+
+  <section class="information">
+    <div class="information__logo">
+      <img src="assets/img/icon-information.png" alt="Icono información">
+    </div>
+
+    <div class="information__adult">
+      <div class="information__adult-content">
+        <h2>Boda de adultos</h2>
+        <p>Adoramos a tus hijos, pero creemos que necesitas una noche libre</p>
+        <h3>Solo adultos por favor</h3>
+      </div>
+    </div>
+
+    <div class="information__icon">
+      <img src="assets/img/icon-adults.png" alt="Icono">
+    </div>
+
+    <div class="information__present">
+      <div class="information__present-content">
+        <h2>Regalo de bodas</h2>
+        <p>El regalo es opcional, la asistencia obligatoria. Pero si quieres tener un detalle con nosotros y nos quieres
+          ayudar con nuestro viaje te dejamos nuestro número de cuenta.</p>
+        <img src="assets/img/japan.png" alt="Foto de Japón">
+        <div class="bank-account">
+          <p>ES00 0000 0000 0000 0000</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="information__icon">
+      <img src="assets/img/icon-bus.png" alt="Icono">
+    </div>
+
+    <div class="information__bus">
+      <div class="information__bus-content">
+        <h2>Hay bus!</h2>
+        <p> Queremos que solo os preocupéis de pasarlo genial, así que tenéis a vuestra disposición autobuses para la
+          ida y la vuelta.</p>
+
+        <nz-collapse nzGhost>
+          <nz-collapse-panel nzHeader="Horarios de Ida">
+            <p style="margin:0;">
+              MOSTRAR HORARIOS DE IDA
+            </p>
+          </nz-collapse-panel>
+          <nz-collapse-panel nzHeader="Horarios de Vuelta">
+            <p style="margin:0;">
+              MOSTRAR HORARIOS DE VUELTA
+            </p>
+          </nz-collapse-panel>
+        </nz-collapse>
+
+
+      </div>
+    </div>
+
+
+  </section>
+
+  <section class="album">
+    <div class="album__logo">
+      <img src="assets/img/camara.png" alt="Icono album">
+    </div>
+    <h3>¡Os invitamos a participar en nuestro Álbum de boda!</h3>
+    <p>Nos haría muchísima ilusión que subas las fotos que captures durante la celebración a nuestro álbum online
+      compartido. Será un hermoso regalo para nosotros poder revivir la boda desde tu perspectiva.</p>
+    <a href="#" target="_blank" rel="noopener noreferrer" nz-button nzType="default" nzShape="round"
+      nzSize="large"><span nz-icon nzType="camera" nzTheme="outline"></span> Subir fotos</a>
+
+    <h3>Por cierto, un favorcito:</h3>
+    <p>En los momentos más especiales, como la ceremonia o el primer baile, te pedimos que nos acompañes sin pantallas
+      de por medio. Así nuestro fotógrafo podrá hacer su magia sin interrupciones. ¡Gracias por ayudarnos a que esos
+      recuerdos sean perfectos!</p>
+  </section>
+
+  <section class="end">
+    <div class="end__img">
+      <img src="assets/img/foto-marco.png" alt="Fondo final">
+    </div>
+  </section>
+
+
+</nz-content>
+
+
+<nz-footer>
+  <app-footer></app-footer>
+</nz-footer>

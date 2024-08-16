@@ -29,9 +29,21 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "./node_modules/@ant-design/icons-angular/src/inline-svg/",
+                "output": "/assets/"
+              },
+              {
+                "glob": "**/*",         
+                "input": "src/assets",
+                "output": "/assets/"
               }
             ],
             "styles": [
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
+              "src/styles.less",
               "src/styles.scss"
             ],
             "scripts": []
@@ -88,9 +100,16 @@
               {
                 "glob": "**/*",
                 "input": "public"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets",
+                "output": "/assets/"
               }
             ],
             "styles": [
+              "src/styles.less",
+              "./node_modules/ng-zorro-antd/ng-zorro-antd.min.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -98,5 +117,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "1a22b7fd-fe33-4fef-b40e-7ed2d067ea44"
   }
 }
