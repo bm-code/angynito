@@ -16,11 +16,12 @@ import { NzRadioModule } from 'ng-zorro-antd/radio';
 import { NzSelectModule } from 'ng-zorro-antd/select';
 import { Subscription, interval } from 'rxjs';
 import { FooterComponent } from '../footer/footer.component';
+import { UploadPhotoComponent } from "../upload-photo/upload-photo.component";
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [NzLayoutModule, NzGridModule, DatePipe, NzButtonModule, NzIconModule, NzCollapseModule, NzFormModule, ReactiveFormsModule, NzInputModule, NzSelectModule, NzInputNumberModule, NzRadioModule, FooterComponent, NzFooterComponent],
+  imports: [NzLayoutModule, NzGridModule, DatePipe, NzButtonModule, NzIconModule, NzCollapseModule, NzFormModule, ReactiveFormsModule, NzInputModule, NzSelectModule, NzInputNumberModule, NzRadioModule, FooterComponent, NzFooterComponent, UploadPhotoComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
