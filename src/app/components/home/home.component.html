@@ -51,9 +51,24 @@
 
   <section class="timer">
     <div class="timer__countdown">
-      <p>Quedan {{ countdown.days }} días, {{ countdown.hours }} horas, {{ countdown.minutes }} minutos y {{
-        countdown.seconds }} segundos</p>
-    </div>
+      <div class="card">
+          <div class="card__content">{{ countdown.days }}</div>
+          <p>Días</p>
+      </div>
+      <div class="card">
+          <div class="card__content">{{ countdown.hours }}</div>
+          <p>Horas</p>
+      </div>
+      <div class="card">
+          <div class="card__content">{{ countdown.minutes }}</div>
+          <p>Minutos</p>
+      </div>
+      <div class="card">
+          <div class="card__content">{{ countdown.seconds }}</div>
+          <p>Segundos</p>
+      </div>
+  </div>
+  
 
     <div class="timer__calendar">
       <h2>Noviembre</h2>
@@ -159,11 +174,12 @@
 
     <div class="information__adult">
       <div class="information__adult-content">
-        <h2>Boda de adultos</h2>
-        <p>Adoramos a tus hijos, pero creemos que necesitas una noche libre</p>
-        <h3>Solo adultos por favor</h3>
+          <h2>Boda de adultos</h2>
+          <p>Adoramos a tus hijos, pero creemos que necesitas una noche libre</p>
+          <h3>Solo adultos por favor</h3>
       </div>
-    </div>
+  </div>
+  
 
     <div class="information__icon">
       <img src="assets/img/icon-adults.png" alt="Icono">
@@ -171,15 +187,16 @@
 
     <div class="information__present">
       <div class="information__present-content">
-        <h2>Regalo de bodas</h2>
-        <p>El regalo es opcional, la asistencia obligatoria. Pero si quieres tener un detalle con nosotros y nos quieres
-          ayudar con nuestro viaje te dejamos nuestro número de cuenta.</p>
-        <img src="assets/img/japan.png" alt="Foto de Japón">
-        <div class="bank-account">
-          <p>ES00 0000 0000 0000 0000</p>
-        </div>
+          <h2>Regalo de bodas</h2>
+          <p>El regalo es opcional, la asistencia obligatoria. Pero si quieres tener un detalle con nosotros y nos quieres
+              ayudar con nuestro viaje te dejamos nuestro número de cuenta.</p>
+          <img src="assets/img/japan.png" alt="Foto de Japón">
+          <div class="bank-account">
+              <p>ES53 0128 0704 5101 0008 0033</p>
+          </div>
       </div>
-    </div>
+  </div>
+  
 
     <div class="information__icon">
       <img src="assets/img/icon-bus.png" alt="Icono">
@@ -187,26 +204,26 @@
 
     <div class="information__bus">
       <div class="information__bus-content">
-        <h2>Hay bus!</h2>
-        <p> Queremos que solo os preocupéis de pasarlo genial, así que tenéis a vuestra disposición autobuses para la
-          ida y la vuelta.</p>
-
-        <nz-collapse nzGhost>
-          <nz-collapse-panel nzHeader="Horarios de Ida">
-            <p style="margin:0;">
-              MOSTRAR HORARIOS DE IDA
-            </p>
-          </nz-collapse-panel>
-          <nz-collapse-panel nzHeader="Horarios de Vuelta">
-            <p style="margin:0;">
-              MOSTRAR HORARIOS DE VUELTA
-            </p>
-          </nz-collapse-panel>
-        </nz-collapse>
-
-
+          <h2>¡Hay bus!</h2>
+          <p>Queremos que solo os preocupéis de pasarlo genial, así que tenéis a vuestra disposición autobuses para la
+              ida y la vuelta.</p>
+  
+          <nz-collapse nzGhost>
+              <nz-collapse-panel nzHeader="Horarios de Ida">
+                  <p style="margin:0;">
+                      MOSTRAR HORARIOS DE IDA
+                  </p>
+              </nz-collapse-panel>
+              <nz-collapse-panel nzHeader="Horarios de Vuelta">
+                  <p style="margin:0;">
+                      MOSTRAR HORARIOS DE VUELTA
+                  </p>
+              </nz-collapse-panel>
+          </nz-collapse>
+  
       </div>
-    </div>
+  </div>
+  
 
 
   </section>
@@ -218,8 +235,6 @@
     <h3>¡Os invitamos a participar en nuestro Álbum de boda!</h3>
     <p>Nos haría muchísima ilusión que subas las fotos que captures durante la celebración a nuestro álbum online
       compartido. Será un hermoso regalo para nosotros poder revivir la boda desde tu perspectiva.</p>
-    <a href="#" target="_blank" rel="noopener noreferrer" nz-button nzType="default" nzShape="round"
-      nzSize="large"><span nz-icon nzType="camera" nzTheme="outline"></span> Subir fotos</a>
 
       <app-upload-photo></app-upload-photo>
 
