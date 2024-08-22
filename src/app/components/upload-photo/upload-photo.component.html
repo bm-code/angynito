@@ -1,6 +1,11 @@
 <div class="upload-photo">
     <h2>¡Sube tus fotos de la boda!</h2>
-    <input type="file" (change)="uploadFile($event)" />
+    <div class="custom-file-upload">
+        <label for="file-upload" class="custom-button">
+            <span nz-icon nzType="camera" nzTheme="outline"></span> Subir fotos
+        </label>
+        <input id="file-upload" type="file" (change)="uploadFile($event)" />
+    </div>
     @if (uploadPercent) {
     <div>
         <progress [value]="uploadPercent | async" max="100"></progress>

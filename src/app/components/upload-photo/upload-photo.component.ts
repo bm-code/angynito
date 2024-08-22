@@ -1,12 +1,14 @@
 import { AsyncPipe } from '@angular/common';
 import { Component } from '@angular/core';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { NzButtonModule } from 'ng-zorro-antd/button';
+import { NzIconModule } from 'ng-zorro-antd/icon';
 import { finalize, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-upload-photo',
   standalone: true,
-  imports: [AsyncPipe],
+  imports: [AsyncPipe, NzButtonModule, NzIconModule],
   templateUrl: './upload-photo.component.html',
   styleUrl: './upload-photo.component.scss'
 })
