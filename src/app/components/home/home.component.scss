@@ -5,15 +5,16 @@ nz-content{
 }
 
 .initial{
+    height: 100vh;
     background-image: url("/assets/img/angynito.jpg");
     background-size: cover;
+    background-position: center center;
     padding: 1em;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    height: 800px;
 
     &__icon{
         max-width: 100px;
@@ -42,7 +43,7 @@ nz-content{
     text-align: center;
 
     .wedding__icon{
-        max-width: 150px;
+        max-width: 100px;
         margin-bottom: 1em;
     }
 }
@@ -70,7 +71,7 @@ nz-content{
         margin-top: 2em;
         margin-bottom: 2em;
         img{
-            width: 150px;
+            width: 100px;
         }
         p{
             font-size: 30px;
@@ -90,7 +91,7 @@ nz-content{
     
     .timer__countdown {
         display: flex;
-        gap: 20px;
+        gap: 10px;
         justify-content: center;
         margin-bottom: 2em;
     }
@@ -112,7 +113,7 @@ nz-content{
     }
     
     .card__content {
-        font-size: 1.5rem;
+        font-size: 18px;
         font-weight: bold;
         color: #333;
         transition: opacity 0.5s ease-in-out;
@@ -120,7 +121,7 @@ nz-content{
     }
     
     p {
-        font-size: 1rem;
+        font-size: 14px;
         color: #666;
         margin: 0;
     }
@@ -141,7 +142,7 @@ nz-content{
     padding: 2em .6em;
 
     .attendance__logo{
-        max-width: 150px;
+        max-width: 100px;
         margin-bottom: 1em;
     }
 
@@ -197,17 +198,11 @@ nz-content{
     padding: 1em 0;
 
     .information__logo{
-        max-width: 150px;
+        max-width: 100px;
         margin-bottom: 1em;
     }
 
     .information__adult {
-        // background-image: url("/assets/img/marco-horizontal.svg");
-        // background-size: contain;
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // width: 100%;
-        // aspect-ratio: 16 / 9;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -244,22 +239,16 @@ nz-content{
 
     .information__icon{
         img{
-            max-width: 150px;
+            max-width: 100px;
         }
     }
 
     .information__present {
-        // background-image: url("/assets/img/marco-vertical.svg");
-        // background-size: contain; 
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // width: 100%;
-        // aspect-ratio: 3 / 4; 
         display: flex;
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
-        padding: 20px; 
+        padding: 10px; 
     }
     
     .information__present-content {
@@ -291,6 +280,7 @@ nz-content{
         border-radius: 50px;
         background-color: rgba(120, 142, 141, 0.35); 
         margin-top: 10px;
+        letter-spacing: -1px;
     }
 }
     
@@ -309,12 +299,6 @@ nz-content{
     
 
     .information__bus {
-        // background-image: url("/assets/img/marco-vertical.svg");
-        // background-size: contain;
-        // background-position: center;
-        // background-repeat: no-repeat;
-        // width: 100%;
-        // aspect-ratio: 3 / 4;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -327,6 +311,10 @@ nz-content{
         width: 80%;
         box-sizing: border-box;
         height: 70%;
+
+        ul{
+            text-align: left;
+        }
     }
     
     .information__bus h2, 
@@ -386,7 +374,7 @@ nz-content{
     margin-top: 3em;
     .album__logo{
         img{
-            max-width: 150px;
+            max-width: 100px;
         }
     }
 }
