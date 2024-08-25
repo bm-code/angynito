@@ -50,24 +50,28 @@
   </section>
 
   <section class="timer">
-    <div class="timer__countdown">
-      <div class="card">
-          <div class="card__content">{{ countdown.days }}</div>
-          <p>Días</p>
-      </div>
-      <div class="card">
-          <div class="card__content">{{ countdown.hours }}</div>
-          <p>Horas</p>
-      </div>
-      <div class="card">
-          <div class="card__content">{{ countdown.minutes }}</div>
-          <p>Minutos</p>
-      </div>
-      <div class="card">
-          <div class="card__content">{{ countdown.seconds }}</div>
-          <p>Segundos</p>
-      </div>
-  </div>
+    @if (weddingDate > today) {
+      <div class="timer__countdown">
+        <div class="card">
+            <div class="card__content">{{ countdown.days }}</div>
+            <p>Días</p>
+        </div>
+        <div class="card">
+            <div class="card__content">{{ countdown.hours }}</div>
+            <p>Horas</p>
+        </div>
+        <div class="card">
+            <div class="card__content">{{ countdown.minutes }}</div>
+            <p>Minutos</p>
+        </div>
+        <div class="card">
+            <div class="card__content">{{ countdown.seconds }}</div>
+            <p>Segundos</p>
+        </div>
+    </div>
+    }@else{
+      <h2>!Hoy es el Gran Día!</h2>
+    }
   
 
     <div class="timer__calendar">
@@ -156,9 +160,9 @@
             <nz-form-control>
               <nz-form-label for="busUse">¿Cuándo harás uso del autobús?</nz-form-label>
               <nz-radio-group formControlName="busUse">
-                <label nz-radio nzValue="A">Solo ida</label>
-                <label nz-radio nzValue="B">Solo vuelta</label>
-                <label nz-radio nzValue="C">Ida y vuelta</label>
+                <label nz-radio nzValue="Solo ida">Solo ida</label>
+                <label nz-radio nzValue="Solo vuelta">Solo vuelta</label>
+                <label nz-radio nzValue="Ida y vuelta">Ida y vuelta</label>
               </nz-radio-group>
             </nz-form-control>
           </nz-form-item>

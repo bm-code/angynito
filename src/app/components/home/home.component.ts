@@ -30,6 +30,7 @@ export class HomeComponent implements OnInit, OnDestroy{
   constructor(private fb: NonNullableFormBuilder, private httpClient: HttpClient, private message: NzMessageService, private router: Router) { }
 
   weddingDate = new Date(2024, 10, 23);
+  today = new Date( Date.now() );
   title = 'angynito';
   countdown: { days: number, hours: number, minutes: number, seconds: number } = { days: 0, hours: 0, minutes: 0, seconds: 0 };
   countdownDays: number = 0;
@@ -131,7 +132,7 @@ export class HomeComponent implements OnInit, OnDestroy{
       message: this.attendanceForm.get('message')?.value
     }
 
-    let data = `attendance=${formValues.attendance}&name=${formValues.name}&companionName=${formValues.companionName}&intolerances=${formValues.intelorances}&phone=${formValues.phone}&busSeats=${formValues.busSeats}&busUse=${formValues.busUse}&message=${formValues.message}`;
+    let data = `Asistencia=${formValues.attendance}&Nombre=${formValues.name}&Acompañante=${formValues.companionName}&Intolerancias=${formValues.intelorances}&Teléfono=${formValues.phone}&Quiere_bus=${formValues.bus}&Nº_de asientos=${formValues.busSeats}&Viajes=${formValues.busUse}&mensaje=${formValues.message}`;
     let errorMessage: string = "";
 
     if (this.attendanceForm.valid) {
