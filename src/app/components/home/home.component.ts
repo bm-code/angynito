@@ -29,11 +29,12 @@ export class HomeComponent implements OnInit, OnDestroy{
 
   constructor(private fb: NonNullableFormBuilder, private httpClient: HttpClient, private message: NzMessageService, private router: Router) { }
 
-  weddingDate = new Date(2024, 11, 23);
+  weddingDate = new Date(2024, 10, 23);
   title = 'angynito';
   countdown: { days: number, hours: number, minutes: number, seconds: number } = { days: 0, hours: 0, minutes: 0, seconds: 0 };
   countdownDays: number = 0;
   loading: boolean = false;
+  showBusOptions: boolean = true;
 
   private subscription: Subscription = new Subscription();
   private formKey: string = 'mgvwzvyb';
@@ -44,6 +45,7 @@ export class HomeComponent implements OnInit, OnDestroy{
     companionName: FormControl<string>;
     intolerances: FormControl<string>;
     phone: FormControl<string>;
+    bus: FormControl<string>;
     busSeats: FormControl<number>;
     busUse: FormControl<string>;
     message: FormControl<string>;
@@ -61,9 +63,22 @@ export class HomeComponent implements OnInit, OnDestroy{
       companionName: [''],
       intolerances: [''],
       phone: ['', [Validators.required, Validators.minLength(9), Validators.maxLength(9), Validators.pattern('^[0-9]*$')]],
+      bus: ['Sí', [Validators.required]],
       busSeats: [1, [Validators.required]],
       busUse: ['', [Validators.required]],
       message: ['']
+    });
+
+    this.attendanceForm.get('bus')?.valueChanges.subscribe((value) => {
+      if (value === 'Sí') {
+        this.attendanceForm.get('busSeats')?.enable();
+        this.attendanceForm.get('busUse')?.enable();
+        this.showBusOptions = true;
+      } else {
+        this.attendanceForm.get('busSeats')?.disable();
+        this.attendanceForm.get('busUse')?.disable();
+        this.showBusOptions = false;
+      }
     });
   }
 
@@ -110,6 +125,7 @@ export class HomeComponent implements OnInit, OnDestroy{
       companionName: this.attendanceForm.get('companionName')?.value,
       intelorances: this.attendanceForm.get('intolerances')?.value,
       phone: this.attendanceForm.get('phone')?.value,
+      bus: this.attendanceForm.get('bus')?.value,
       busSeats: this.attendanceForm.get('busSeats')?.value,
       busUse: this.attendanceForm.get('busUse')?.value,
       message: this.attendanceForm.get('message')?.value

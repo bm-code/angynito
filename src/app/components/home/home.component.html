@@ -135,23 +135,34 @@
         </nz-form-item>
         <nz-form-item>
           <nz-form-control>
-            <nz-form-label for="busSeats">Nº de plazas de autobús</nz-form-label>
-            <nz-input-number-group>
-              <nz-input-number [nzMax]="5" [nzMin]="1" formControlName="busSeats"
-                nzPlaceHolder="Indica cuantas plazas ocuparás"></nz-input-number>
-            </nz-input-number-group>
-          </nz-form-control>
-        </nz-form-item>
-        <nz-form-item>
-          <nz-form-control>
-            <nz-form-label for="busUse">¿Cuándo harás uso del autobús?</nz-form-label>
-            <nz-radio-group formControlName="busUse">
-              <label nz-radio nzValue="A">Solo ida</label>
-              <label nz-radio nzValue="B">Solo vuelta</label>
-              <label nz-radio nzValue="C">Ida y vuelta</label>
+            <nz-form-label for="bus">¿Irás en autobús?</nz-form-label>
+            <nz-radio-group formControlName="bus">
+              <label nz-radio nzValue="Sí">Sí</label>
+              <label nz-radio nzValue="No">No, iré en coche</label>
             </nz-radio-group>
           </nz-form-control>
         </nz-form-item>
+        @if (showBusOptions) {
+          <nz-form-item>
+            <nz-form-control>
+              <nz-form-label for="busSeats">Nº de plazas de autobús</nz-form-label>
+              <nz-input-number-group>
+                <nz-input-number [nzMax]="5" [nzMin]="1" formControlName="busSeats"
+                  nzPlaceHolder="Indica cuantas plazas ocuparás"></nz-input-number>
+              </nz-input-number-group>
+            </nz-form-control>
+          </nz-form-item>
+          <nz-form-item>
+            <nz-form-control>
+              <nz-form-label for="busUse">¿Cuándo harás uso del autobús?</nz-form-label>
+              <nz-radio-group formControlName="busUse">
+                <label nz-radio nzValue="A">Solo ida</label>
+                <label nz-radio nzValue="B">Solo vuelta</label>
+                <label nz-radio nzValue="C">Ida y vuelta</label>
+              </nz-radio-group>
+            </nz-form-control>
+          </nz-form-item>
+        }
         <nz-form-item>
           <nz-form-control>
             <nz-form-label for="message">¿Quieres dejarnos un mensaje?</nz-form-label>
@@ -188,7 +199,7 @@
     <div class="information__present">
       <div class="information__present-content">
           <h2>Regalo de bodas</h2>
-          <p>El regalo es opcional, la asistencia obligatoria. Pero si quieres tener un detalle con nosotros te dejamos nuestro número de cuenta.</p>
+          <p>El mejor regalo es tu compañía, pero si quieres tener un detalle con nosotros te dejamos nuestro número de cuenta</p>
           <img src="assets/img/japan.png" alt="Foto de Japón">
           <div class="bank-account">
               <p>ES53 0128 0704 5101 0008 0033</p>
