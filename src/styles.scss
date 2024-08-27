@@ -1,9 +1,25 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pinyon+Script&display=swap');
+@font-face {
+    font-family: 'Znikomit';
+    src: url('/assets/fonts/Znikomit.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Canter';
+    src: url('/assets/fonts/Canter.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap');
 
 :root{
-    --primary-color: #570d0d;
-    --primary-color-hover: #650707;
-    --primary-color-active: #6f0909;
+    --primary-color: #5b759b;
+    --primary-color-hover: #97acc4;
+    --primary-color-active: #354c74;
+    --text-color: #343c55;
+    --bg-color: #f5f5f5;
 }
 
 
@@ -16,7 +32,15 @@ img{
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Pinyon Script', cursive;
+    font-family: 'Znikomit', sans-serif;
+    font-weight: 800;
+    color: var(--text-color);
+}
+
+p, input, label, a{
+    font-family: 'Cormorant Garamond', sans-serif;
+    font-size: 20px!important;
+    color: var(--text-color);
 }
 
 h1{
@@ -32,7 +56,7 @@ h3{
 }
 
 nz-content{
-    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
     section:not(.fullwidth){
         padding: 1em .6em
     }
@@ -41,5 +65,34 @@ nz-content{
 .fullwidth{
     img{
         width: 100%;
+    }
+}
+
+.canter{
+    font-family: 'Canter', sans-serif;
+}
+
+.znikomit{
+    font-family: 'Znikomit', sans-serif;
+}
+
+.large-text{
+    font-size: 50px!important;
+}
+
+.medium-text{
+    font-size: 30px!important;
+}
+
+.ant-btn-round.ant-btn-lg {
+    background-color: var(--text-color) !important;
+    color: white!important;
+    border-color: var(--text-color) !important;
+    transition: all 0.3s;
+    text-transform: uppercase;
+
+    &:hover{
+        background-color: var(--primary-color) !important;
+        border-color: var(--primary-color) !important;
     }
 }

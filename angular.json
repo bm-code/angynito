@@ -39,6 +39,11 @@
                 "glob": "**/*",         
                 "input": "src/assets",
                 "output": "/assets/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/fonts",
+                "output": "/fonts/"
               }
             ],
             "styles": [
@@ -113,6 +118,11 @@
                 "glob": "**/*",
                 "input": "src/assets",
                 "output": "/assets/"
+              },
+              {
+                "glob": "**/*",
+                "input": "src/assets/fonts",
+                "output": "/fonts/"
               }
             ],
             "styles": [
