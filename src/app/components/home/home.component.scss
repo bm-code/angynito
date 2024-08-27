@@ -237,6 +237,8 @@ nz-content{
     }
     
     .information__adult-content {
+        display: flex;
+        flex-direction: column;
         text-align: center;
         max-width: 100%; 
         width: 70%;
@@ -247,7 +249,6 @@ nz-content{
     .information__adult p, 
     .information__adult h3 {
         color: white;
-        word-wrap: break-word;
     }
     
     @media (min-width: 768px) {
@@ -283,14 +284,10 @@ nz-content{
     }
     
     .information__present-content {
+        display: flex;
+        flex-direction: column;
         text-align: center;
         box-sizing: border-box;
-    }
-    
-    .information__present h2, 
-    .information__present p {
-        margin: 10px 0;
-        word-wrap: break-word; 
     }
     
     .information__present img {
@@ -336,6 +333,9 @@ nz-content{
     }
     
     .information__bus-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         text-align: center;
         box-sizing: border-box;
         height: 70%;
@@ -349,7 +349,6 @@ nz-content{
     .information__bus h2, 
     .information__bus p {
         color: white;
-        margin: 0;
         word-wrap: break-word;
     }
     
