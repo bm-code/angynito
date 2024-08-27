@@ -247,7 +247,6 @@ nz-content{
     .information__adult p, 
     .information__adult h3 {
         color: white;
-        margin: 10px 0;
         word-wrap: break-word;
     }
     
@@ -278,6 +277,7 @@ nz-content{
         justify-content: center;
         align-items: center;
         box-sizing: border-box;
+        padding-top: 1em;
         padding-left: 10px; 
         padding-right: 10px; 
     }
@@ -349,12 +349,12 @@ nz-content{
     .information__bus h2, 
     .information__bus p {
         color: white;
-        margin: 10px 0;
+        margin: 0;
         word-wrap: break-word;
     }
     
     ::ng-deep .ant-collapse > .ant-collapse-item > .ant-collapse-header {
-        font-family: 'Cormorant Garamond', sans-serif;
+        font-family: 'Poppins', sans-serif;
         font-size: 18px!important;
         color: white;
         text-align: left !important;
