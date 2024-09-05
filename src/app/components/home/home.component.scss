@@ -5,8 +5,8 @@ nz-content{
 }
 
 .initial{
-    min-height: 120vh;
-    background-image: url("/assets/img/angynito.jpg");
+    min-height: 135vh;
+    background-image: url("/assets/img/angynito-azul.jpg");
     background-size: cover;
     background-position: center center;
     display: flex;
@@ -29,6 +29,16 @@ nz-content{
         &.info{
             p{
                 font-size: 30px
+            }
+
+            .info__names{
+                margin: auto;
+                max-width: 280px;
+            }
+            .info__date{
+                margin: auto;
+                margin-top: 2em;
+                max-width: 100px;
             }
         }
     }
