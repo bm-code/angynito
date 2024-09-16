@@ -21,11 +21,12 @@ nz-content{
 
 
     &__element{
+        // margin: auto 1em;
+        // justify-content: center;
+        margin-top: 3em;
         flex: 0 0 80%;
-        margin: auto 1em;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         &.info{
             p{
                 font-size: 30px
