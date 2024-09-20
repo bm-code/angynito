@@ -19,6 +19,12 @@ nz-content{
     &__element{
         position: absolute;
         bottom: 170px;
+        @media screen and (min-width: 280px) {
+            bottom: 360px;
+            }
+        @media screen and (min-width: 350px) {
+            bottom: 290px;
+            }
         @media screen and (min-width: 550px) {
             bottom: 120px;
             }
@@ -39,10 +45,22 @@ nz-content{
 
             .info__names{
                 margin: auto;
+                @media screen and (max-width: 280px) {
+                    max-width: 100px;
+                }
+                @media screen and (max-width: 400px) {
+                    max-width: 140px;
+                }
                 max-width: 280px;
             }
             .info__date{
                 margin: auto;
+                @media screen and (max-width: 280px) {
+                    max-width: 50px;
+                }
+                @media screen and (max-width: 400px) {
+                    max-width: 80px;
+                }
                 max-width: 100px;
             }
         }
