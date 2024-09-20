@@ -409,9 +409,10 @@ nz-content{
     align-items: center;
     margin: 3em 0;
 
-    .end__img{
         img{
-            max-width: 350px;
+            margin: auto;
+            margin-bottom: 2em;
+            border-radius: 30px;
+
         }
-    }
 }
