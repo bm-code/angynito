@@ -5,10 +5,6 @@ nz-content{
 }
 
 .initial{
-    min-height: 135vh;
-    background-image: url("/assets/img/angynito-azul.jpg");
-    background-size: cover;
-    background-position: center center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -21,8 +17,17 @@ nz-content{
 
 
     &__element{
-        // margin: auto 1em;
-        // justify-content: center;
+        position: absolute;
+        bottom: 170px;
+        @media screen and (min-width: 550px) {
+            bottom: 120px;
+            }
+        @media screen and (min-width: 600px) {
+        bottom: 60px;
+        }
+        @media screen and (min-width: 700px) {
+            bottom: -45px;
+            }
         margin-top: 3em;
         flex: 0 0 80%;
         display: flex;
@@ -38,7 +43,6 @@ nz-content{
             }
             .info__date{
                 margin: auto;
-                margin-top: 2em;
                 max-width: 100px;
             }
         }
@@ -46,6 +50,7 @@ nz-content{
 
     &__content{
         width: 100%;
+        margin-top: -2.3em;
         padding-top: 1em;
         padding-left: 1em;
         padding-right: 1em;
